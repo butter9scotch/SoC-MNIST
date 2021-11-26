@@ -1,0 +1,18 @@
+module test();
+  
+  logic [31:0] num1;
+  logic [31:0] num2;
+  logic [31:0] sum;
+  
+  
+  flp_adder flp (.num1(num1),.num2(num2),.sum(sum));
+  
+  initial begin
+    #50;
+    num1 = 32'b11000001100101000000000000000000;
+    num2 = 32'b01000001000110000000000000000000; //expected output see in the ieee paper
+ 
+    #50;
+    $display("Output = %b", sum);
+  end
+endmodule
