@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include <math.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <time.h>
 
  float sumofarray(float c[],int n)
  {
@@ -47,15 +51,39 @@ void ieee(myfloat var)
  
 int main()
 {
-    float a[5], b[5], c[5];
-    int i,n,j,k,l;
+    float a[4], b[4], c[4];
+    int i,n,j,k,l,m;
     float sum;
     myfloat var;
-   
+    int p = 1;;
+    //p = rand() & 1;
     //size of array = n;
-    n = 1;
+    n = 4;
  
-    printf("Enter elements in array 1 : ");
+    printf("Enter elements in array 1 : \n");
+    
+    for(i=0; i<n; i++)
+    {
+        a[i] = ((float) rand()/(float)RAND_MAX)*100;
+        a[i] = a[i]*p;
+        p = -p;
+    }
+    
+    for(m=0; m<n; m++)
+    {
+        b[m] = ((float) rand()/(float)RAND_MAX)*100;
+    }
+    
+    for(l=0; l<n; l++)
+    {
+        printf("a array %f \n",a[l]);
+    }
+    
+    for(l=0; l<n; l++)
+    {
+        printf("b array %f \n",b[l]);
+    }
+    /*
     for(i=0; i<n; i++)
     {
         scanf("%f",&a[i]);
@@ -66,6 +94,7 @@ int main()
     {
         scanf("%f",&b[j]);
     }
+    */
     
     for(k = 0; k<n; k++){
         c[k] = a[k]*b[k];
