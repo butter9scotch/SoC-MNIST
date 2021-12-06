@@ -9,8 +9,8 @@ module flp_adder(input logic [31:0] num1,input logic [31:0] num2,output logic [3
 
         logic [7:0] norm_exp_in;
 	logic [24:0] norm_mant_in;		 
-  logic [7:0] norm_exp = 0;
-  logic [24:0] norm_mant = 0;
+  logic [7:0] norm_exp;
+  logic [24:0] norm_mant0;
      
 	logic A_sign;
 	logic [7:0] A_exp;
@@ -20,8 +20,8 @@ module flp_adder(input logic [31:0] num1,input logic [31:0] num2,output logic [3
 	logic [7:0] B_exp;
 	logic [23:0] B_mant;
 
-  logic [23:0] temp_mant = 0;
-  logic [7:0] exp_diff = 0;			 
+  logic [23:0] temp_mant;
+  logic [7:0] exp_diff;			 
 	
         logic sum_sign;
 	logic [7:0] sum_exp;
