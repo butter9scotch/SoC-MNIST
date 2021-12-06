@@ -32,6 +32,10 @@ module flp_adder(input logic [31:0] num1,input logic [31:0] num2,output logic [3
 
   always @ (inputa, inputb) begin //{
 		A_sign = inputa[31];
+	          temp_mant = 0;
+                  exp_diff = 0;
+                  norm_exp = 0;
+                  norm_mant = 0;
                 if(inputa[30:23] == 8'h0) begin //{
       		A_exp  = 8'h1;
       		A_mant = {1'b0, inputa[22:0]};
