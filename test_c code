@@ -59,6 +59,7 @@ int main()
     //p = rand() & 1;
     //size of array = n;
     n = 4;
+    srand(time(0));
  
     printf("Enter elements in array 1 : \n");
     
